@@ -1,6 +1,20 @@
 html
   head
-    title Login Page
+    title= title
+    link(type="text/css" rel="stylesheet" href="css/style.css")    
+    link(type="text/css" rel="stylesheet" href="css/bootstrap.min.css")
   body
-    h1 Login
-    
+    .container
+      h1(class="welcome text-center") Express Chat
+      div(class="card card-container")
+        h2(class='login_title text-center') Login
+        hr
+        form(class="form-signin")
+          span(id="reauth-email" class="reauth-email")
+          p(class="input_title") Email
+          input(type="text" id="inputEmail" class="login_box" placeholder="Email" required autofocus)
+          p(class="input_title") Password
+          input(type="password" id="inputPassword" class="login_box" placeholder="******" required)
+          div(id="remember" class="checkbox")
+            label              
+              button(class="btn btn-lg btn-primary" type="submit") Login
